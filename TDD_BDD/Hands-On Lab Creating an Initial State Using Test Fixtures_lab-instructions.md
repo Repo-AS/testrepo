@@ -1,4 +1,4 @@
-## Hands-On Lab: Creating an Initial State Using Test Fixtures
+# Hands-On Lab: Creating an Initial State Using Test Fixtures
 
 <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/H0pqcU2h9yVscoKD5GR_gQ.png"> <br>
 
