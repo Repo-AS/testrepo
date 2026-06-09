@@ -1,4 +1,4 @@
-::page{title="Hands-On Lab: Creating an Initial State Using Test Fixtures"}
+## Hands-On Lab: Creating an Initial State Using Test Fixtures
 
 <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/H0pqcU2h9yVscoKD5GR_gQ.png"> <br>
 
@@ -14,11 +14,11 @@ After completing this lab, you will be able to:
 - Load test data from external files for testing your code
 - Use loaded test data in your test cases and assertions
 
-::page{title="About Theia"}
+## About Theia
 
 Theia is an open-source IDE (Integrated Development Environment) that can be run on desktop or on cloud. You will be using the Theia IDE to do this lab. When you log into the Theia environment, you are presented with a 'dedicated computer on the cloud' exclusively for you. This is available to you as long as you work on the labs. Once you log off, this 'dedicated computer on the cloud' is deleted along with any files you may have created. So, it is a good idea to finish your labs in a single session. If you finish part of the lab and return to the Theia lab later, you may have to start from the beginning. Plan to work out all your Theia labs when you have the time to finish the complete lab in a single session.
 
-::page{title="Set Up the Lab Environment"}
+## Set Up the Lab Environment
 
 We have a little preparation to do before we can start the lab.
 
@@ -66,7 +66,7 @@ If the command prompt becomes too long you can shorten it to something more mana
 export PS1="[\[\033[01;32m\]\u\[\033[00m\]: \[\033[01;34m\]\W\[\033[00m\]]\$ "
 ```
 
-::page{title="Review of Test Fixtures"}
+## Review of Test Fixtures
 
 In this lab, you are going to use the various test fixtures that are available in the PyUnit package. You should review the code below that shows you what test fixtures are available and when they will be invoked.
 
@@ -90,7 +90,7 @@ class MyTestCases(TestCase):   # the start of a test case
 
 ```
 
-::page{title="Open the Code Editor"}
+## Open the Code Editor
 
 In this lab, you will see the different ways in which test fixtures can be used to set up and tear down the initial state before and after testing.
 
@@ -102,9 +102,9 @@ duwjx-tdd_bdd_PracticeCode/labs/03_test_fixtures
 
 You will do all of your editing work in the file `tests/test_account.py`. Open that up in the editor to get started.
 
-::openFile{path="/home/project/duwjx-tdd_bdd_PracticeCode/labs/03_test_fixtures/tests/test_account.py"}
+::openFile{path="/home/project/duwjx-tdd_bdd_PracticeCode/labs/03_test_fixtures/tests/test_account.py
 
-::page{title="Step 1: Initialize the Database"}
+## Step 1: Initialize the Database
 
 In this step, you are going to set up a test fixture to connect and disconnect from the database. You only need to do this once before and after all of the tests.
 
@@ -152,7 +152,7 @@ nosetests
 
 
 
-::page{title="Step 2: Load Test Data"}
+## Step 2: Load Test Data
 
 In this step, you are going to load some test data so that it can be used during testing. This should only need to be done once before all tests so you will do this in a class method.
 
@@ -198,7 +198,7 @@ nosetests
 
 
 
-::page{title="Step 3: Write a Test Case to Create an Account"}
+## Step 3: Write a Test Case to Create an Account
 
 Now you are ready to write your first test. You will create a single account using the `ACCOUNT_DATA` dictionary that has test data for five accounts. 
 
@@ -240,7 +240,7 @@ You should see:
 
 
 
-::page{title="Step 4: Write a Test Case to Create All Accounts"}
+## Step 4: Write a Test Case to Create All Accounts
 
 Now that you know that one account can be successfully created, let's write a test case that creates all five of the accounts in the `ACCOUNT_DATA` dictionary.
 
@@ -291,7 +291,7 @@ Let's see how we can fix this in the next step.
 
 
 
-::page{title="Step 5: Clear out the tables before each test"}
+## Step 5: Clear out the tables before each test
 
 The reason that your test case failed is because data from a previous test has affected the outcome of the next test. To avoid this, you need to add more test fixtures that will run before and after each test.
 
@@ -341,7 +341,7 @@ You should see the following report:
 
 **Congratulations!** All of your test cases have passed this time.
 
-::page{title="Conclusion"}
+## Conclusion
 
 ### Congratulations on Completing the Test Fixtures Lab
 
