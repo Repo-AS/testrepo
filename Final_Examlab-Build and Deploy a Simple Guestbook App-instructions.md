@@ -1,4 +1,4 @@
-::page{title="Lab (Option A: Python): Build and Deploy a Simple Guestbook App"}
+# Lab (Option A: Python): Build and Deploy a Simple Guestbook App
 
 <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/cc201/images/IDSN-logo.png" width="200" alt="cognitiveclass.ai logo">
 
