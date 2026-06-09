@@ -12,13 +12,13 @@ In this lab, you will:
 - Autoscale the Guestbook application using Horizontal Pod Autoscaler
 - Perform Rolling Updates and Rollbacks
 
-::page{title="Project Overview"}
+## Project Overview
 
 ## Guestbook application
 
 Guestbook is a simple web application that we will build and deploy with Docker and Kubernetes. The application consists of a web front end, which will have a text input where you can enter any text and submit. For all of these, we will create Kubernetes Deployments and Pods. Then, we will apply Horizontal Pod Scaling to the Guestbook application and finally work on Rolling Updates and Rollbacks.
 
-::page{title="Verify the environment and command line tools"}
+## Verify the environment and command line tools
 
 1. If a terminal is not already open, open a terminal window by using the menu in the editor: `Terminal > New Terminal`.
 
@@ -54,7 +54,7 @@ cd guestbook
 ls
 ```
 
-::page{title="Creating the Guestbook app"}
+## Creating the Guestbook app
 
 # Note:
 
@@ -228,7 +228,7 @@ kubectl port-forward deployment.apps/guestbook 3000:3000
 
 12. Try out the guestbook by putting in a few entries. You should see them appear above the input box after you hit **Submit**.
 
-::page{title="Autoscale the Guestbook application using Horizontal Pod Autoscaler"}
+## Autoscale the Guestbook application using Horizontal Pod Autoscaler
 
 1. Autoscale the Guestbook deployment using `kubectl autoscale deployment`.
 
@@ -308,7 +308,7 @@ kubectl get hpa guestbook
 
 - Please close the other terminals where load generator and port-forward commands are running.
 
-::page{title="Perform Rolling Updates and Rollbacks on the Guestbook application"}
+## Perform Rolling Updates and Rollbacks on the Guestbook application
 
 > **Note:** Please run all the commands in the 1st terminal unless mentioned to use a new terminal.
 
