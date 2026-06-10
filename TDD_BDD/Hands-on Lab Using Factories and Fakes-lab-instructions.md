@@ -1,4 +1,4 @@
-::page{title="Hands-on Lab: Using Factories and Fakes"}
+# Hands-on Lab: Using Factories and Fakes
 
 <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/H0pqcU2h9yVscoKD5GR_gQ.png"> <br>
 
@@ -16,11 +16,11 @@ After completing this lab, you will be able to:
 - Use the Faker class and Fuzzy attributes to provide realistic test data
 - Write test cases that use Factory classes to provide test data
 
-::page{title="About Theia"}
+## About Theia
 
 Theia is an open-source IDE (Integrated Development Environment) that can be run on desktop or on cloud. You will be using the Theia IDE to do this lab. When you log into the Theia environment, you are presented with a 'dedicated computer on the cloud' exclusively for you. This is available to you as long as you work on the labs. Once you log off, this 'dedicated computer on the cloud' is deleted along with any files you may have created. So, it is a good idea to finish your labs in a single session. If you finish part of the lab and return to the Theia lab later, you may have to start from the beginning. Plan to work out all your Theia labs when you have the time to finish the complete lab in a single session.
 
-::page{title="Set Up the Lab Environment"}
+## Set Up the Lab Environment
 
 You have a little preparation to do before you can start the lab.
 
@@ -68,7 +68,7 @@ If working in the terminal becomes difficult because the command prompt is very 
 export PS1="[\[\033[01;32m\]\u\[\033[00m\]: \[\033[01;34m\]\W\[\033[00m\]]\$ "
 ```
 
-::page{title="Navigate to the Code"}
+## Navigate to the Code
 
 In the IDE, navigate to the `duwjx-tdd_bdd_PracticeCode/labs/05_factories_and_fakes` folder. This folder contains all of the source code that you will use for this lab.
 
@@ -79,7 +79,7 @@ duwjx-tdd_bdd_PracticeCode/labs/05_factories_and_fakes
 ![Lab Folder](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CD0241EN-SkillsNetwork/labs/module3/images/05_factories_fakes_folder.png "Lab Folder")
 
 
-::page{title="Step 1: Run nosetests"}
+## Step 1: Run nosetests
 
 Before you make any changes to your code, you should check that all of the test cases are passing. Otherwise, if you encounter failing test cases later, you won't know if you caused them to fail or if they were failing before you changed anything.
 
@@ -95,17 +95,17 @@ You should see the following output:
 
 All tests are colored green! This means they all pass, so you can now move on to modifying the code.
 
-::page{title="Step 2: Create an AccountFactory class"}
+## Step 2: Create an AccountFactory class
 
 In this step, you will create an `AccountFactory` class.
 
 Open the `models/account.py` file to familiarize yourself with the attributes of the `Account` class. These are the same attributes that you will need to add to the `AccountFactory` class.
 
-::openFile{path="/home/project/duwjx-tdd_bdd_PracticeCode/labs/05_factories_and_fakes/models/account.py"}
+::openFile{path="/home/project/duwjx-tdd_bdd_PracticeCode/labs/05_factories_and_fakes/models/account.py
 
 Open the `tests/factories.py` file in the IDE editor. This is the file in which you will add the attributes of the `Account` class to the `AccountFactory` class.
 
-::openFile{path="/home/project/duwjx-tdd_bdd_PracticeCode/labs/05_factories_and_fakes/tests/factories.py"}
+::openFile{path="/home/project/duwjx-tdd_bdd_PracticeCode/labs/05_factories_and_fakes/tests/factories.py
 
 You want to take advantage of the fact that **FactoryBoy** comes with the **Faker** class. This class has [Fake providers](https://faker.readthedocs.io/en/master/providers/baseprovider.html) and a number of [Fuzzy attributes](https://factoryboy.readthedocs.io/en/stable/fuzzy.html).
 
@@ -151,13 +151,13 @@ In `factories.py`, overwrite the code from line 16 onward by pasting in the foll
 ```
 </details>
 
-::page{title="Step 3: Update the Test Cases"}
+## Step 3: Update the Test Cases
 
 In this step, you will update the test cases to use the new `AccountFactory` that you created in the previous step.
 
 Open the `tests/test_account.py` file. Then add the following `import` near the top of the file, after the other `imports`. This will import your new `AccountFactory` class from the `factories` module:
 
-::openFile{path="/home/project/duwjx-tdd_bdd_PracticeCode/labs/05_factories_and_fakes/tests/test_account.py"}
+::openFile{path="/home/project/duwjx-tdd_bdd_PracticeCode/labs/05_factories_and_fakes/tests/test_account.py
 
 ```python
 from factories import AccountFactory
@@ -194,7 +194,7 @@ Run `nosetests` to make sure the test cases still pass.
 nosetests
 ```
 
-::page{title="Step 4: Update test_create_an_account()"}
+## Step 4: Update test_create_an_account()
 
 In this step, you will update the `test_create_an_account()` test.
 
@@ -224,7 +224,7 @@ Run `nosetests` to make sure the test cases still pass.
 nosetests
 ```
 
-::page{title="Step 5: Update test_to_dict()"}
+## Step 5: Update test_to_dict()
 
 In this step, you will update the `test_to_dict()` test.
 
@@ -258,7 +258,7 @@ Run `nosetests` to make sure the test cases still pass.
 nosetests
 ```
 
-::page{title="Step 6: Update test_from_dict()"}
+## Step 6: Update test_from_dict()
 
 In this step, you will update the `test_from_dict()` test.
 
@@ -292,7 +292,7 @@ Run `nosetests` to make sure the test cases still pass.
 nosetests
 ```
 
-::page{title="Step 7: Update test_update_an_account()"}
+## Step 7: Update test_update_an_account()
 
 In this step, you will update the `test_update_an_account()` test.
 
@@ -326,7 +326,7 @@ Run `nosetests` to make sure the test cases still pass.
 nosetests
 ```
 
-::page{title="Step 8: Update test_invalid_id_on_update()"}
+## Step 8: Update test_invalid_id_on_update()
 
 In this step, you will update the `test_invalid_id_on_update()` test.
 
@@ -356,7 +356,7 @@ Run `nosetests` to make sure the test cases still pass.
 nosetests
 ```
 
-::page{title="Step 9: Update test_delete_an_account()"}
+## Step 9: Update test_delete_an_account()
 
 In this step, you will update the `test_delete_an_account()` test.
 
@@ -388,7 +388,7 @@ Run `nosetests` to make sure the test cases still pass.
 nosetests
 ```
 
-::page{title="Step 10: Remove ACCOUNT_DATA references"}
+## Step 10: Remove ACCOUNT_DATA references
 
 Since you have replaced all instances of `ACCOUNT_DATA` with `AccountFactory`, you can clean up the code. In test_account.py, you will remove all remaining references to `ACCOUNT_DATA` and remove the lines that load it from the JSON data file.
 
@@ -468,7 +468,7 @@ TOTAL                   46      0   100%
 Ran 8 tests in 0.548s
 ```
 
-::page{title="Conclusion"}
+## Conclusion
 
 ### Congratulations on Completing the Factories and Fakes Lab
 
