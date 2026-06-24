@@ -1,4 +1,4 @@
-::page{title="Lab: Using Static Analysis"}
+# Lab: Using Static Analysis
 
 ##### Estimated time needed: 30 minutes
 
